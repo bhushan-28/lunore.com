@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-subheading: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-obsidian: #1B1717;
+  --color-espresso: #3B2A2A;
+  --color-rosewood: #5A4038;
+  --color-champagne: #D9C2A3;
+  --color-silk: #F8F5F2;
+  --color-gold: #B88A44;
+  --color-gold-light: #E5C384;
+  --color-gold-dark: #8C6226;
+}
+
+/* Custom Glassmorphism & Lightweight Utility Styles */
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Fast, Lightweight Dark Glass Cards */
+.glass-panel {
+  background: rgba(27, 23, 23, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 194, 163, 0.12);
+}
+
+.glass-card {
+  background: rgba(40, 31, 31, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(217, 194, 163, 0.14);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.glass-card-gold {
+  background: linear-gradient(135deg, rgba(184, 138, 68, 0.12) 0%, rgba(27, 23, 23, 0.9) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(184, 138, 68, 0.3);
+  box-shadow: 0 10px 35px rgba(184, 138, 68, 0.12);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF6E5 0%, #D9C2A3 35%, #B88A44 75%, #F8F5F2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D9C2A3 0%, #B88A44 50%, #8C6226 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1B1717;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2A2A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B88A44;
+}
+
+/* Keyframe animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.03); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 35s linear infinite;
+}
